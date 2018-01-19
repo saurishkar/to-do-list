@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import firebase from 'firebase';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Main from './components/main';
+import FIREBASE from './constants/firebase';
+
+const fb = firebase.initializeApp(FIREBASE.config);
+
+ReactDOM.render(<Main />, document.getElementById('root'));
 registerServiceWorker();
