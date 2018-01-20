@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
-import TodoCreate from './todos/create';
+import TodoCreate from '../containers/todos/create';
 
 class Home extends Component {
 	constructor(props) {

@@ -25,13 +25,17 @@ class TodoCreate extends Component {
 	}
 
 	handleSubmit(values) {
-		console.log(values);
+		const promise = this.props.CreateTodo(values);
+		promise.then(() => {
+			this.props.hide();
+		});
 	}
 
 	render() {
+		const { handleSubmit } = this.props; 
 		return (
 			<Modal show={this.props.show} hide={this.props.hide}>
-				<form className="todo-create-form" onSubmit={this.handleSubmit}>
+				<form className="todo-create-form" onSubmit={handleSubmit(this.handleSubmit)}>
 					<div className="title">Create ToDo</div>
 					<div className="body">
 					
