@@ -8,7 +8,8 @@ class Modal extends Component {
 
 	render() {
 		return (
-			<div className="modal">
+			<div className={`modal modal-${this.props.show ? 'active' : 'inactive'}`}>
+				<a role="button" className="closeBtn" onClick={() => this.props.hide()}>&times;</a>
 				{this.props.children}
 			</div>
 		);
