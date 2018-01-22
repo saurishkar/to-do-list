@@ -1,0 +1,25 @@
+.navbar-main{
+	ul{
+		list-style-type: none;
+		li{
+			display: inline-block;
+		}
+		.navbar-brand{
+			font-size: 35px;
+			font-weight: 2;
+			margin-right: 25px;
+		}
+		.nav-item{
+			padding: 15px;
+			font-size: 20px;
+		}
+	}
+	background-color: black;
+	color: white;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
